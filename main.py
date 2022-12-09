@@ -1,12 +1,13 @@
 from telegram import Update, ReplyKeyboardMarkup, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CallbackContext, CommandHandler, MessageHandler, Filters
 from flask import Flask
+import os
 import messages
 import buttons
 import logging
 app = Flask(__name__)
 
-token = process.env.TOKEN
+token = os.environ.get('TOKEN')
 updater = Updater(
     token=token, use_context=True)
 dispatcher = updater.dispatcher
