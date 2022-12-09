@@ -212,8 +212,9 @@ unknown_handler = MessageHandler(Filters.command, unknown)
 dispatcher.add_handler(unknown_handler)
 
 if __name__ == "__main__":
-    app.run(host=os.getenv('IP', '0.0.0.0'),
-            port=int(os.getenv('PORT', 4444)))
+    app.run(port=int(os.getenv('PORT', 4444)))
+
+
 @app.route("/")
 def hello_world():
     return "<p>Hello, World!</p>"
