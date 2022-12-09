@@ -4,7 +4,7 @@ import messages
 import buttons
 import logging
 
-token = process.env.chatbot_token
+token = token=os.environ["TOKENCHATBOT"]
 updater = Updater(
     token=token, use_context=True)
 dispatcher = updater.dispatcher
