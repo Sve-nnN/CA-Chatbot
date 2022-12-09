@@ -211,8 +211,7 @@ dispatcher.add_handler(pago_handler)
 unknown_handler = MessageHandler(Filters.command, unknown)
 dispatcher.add_handler(unknown_handler)
 
-if __name__ == "__main__":
-    app.run(port=int(os.getenv('PORT', 4444)))
+app.run(host='0.0.0.0', port=8080)
 
 
 @app.route("/")
