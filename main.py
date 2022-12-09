@@ -1,10 +1,12 @@
-from telegram import Update, ReplyKeyboardMarkup
+from telegram import Update, ReplyKeyboardMarkup, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CallbackContext, CommandHandler, MessageHandler, Filters
+from flask import Flask
 import messages
 import buttons
 import logging
+app = Flask(__name__)
 
-token = token=os.environ["TOKENCHATBOT"]
+token = "5486736673:AAGhd8fpErUiS5WmBVlQEveEERSU7OYqkds"
 updater = Updater(
     token=token, use_context=True)
 dispatcher = updater.dispatcher
@@ -74,7 +76,7 @@ def cuentas_command(update: Update, context: CallbackContext):
 
 def precio30_command(update: Update, context: CallbackContext):
     ammount = 30
-    keyboard = buttons.pago
+    keyboard = buttons.pagos
     context.bot.send_message(
         chat_id=update.effective_chat.id, text=messages.funcPago(ammount), reply_markup=ReplyKeyboardMarkup(keyboard))
 
@@ -87,7 +89,7 @@ def precio50_command(update: Update, context: CallbackContext):
 
 
 def precio95_command(update: Update, context: CallbackContext):
-    ammount = 96
+    ammount = 95
     keyboard = buttons.pagos
     context.bot.send_message(
         chat_id=update.effective_chat.id, text=messages.funcPago(ammount), reply_markup=ReplyKeyboardMarkup(keyboard))
@@ -129,8 +131,18 @@ def precio17_command(update: Update, context: CallbackContext):
 
 
 def pago_command(update: Update, context: CallbackContext):
+    keyboard = [
+        [
+            InlineKeyboardButton(
+                "Ir al bot", url="http://t.me/criptoavancespagos_bot"),
+        ],
+
+    ]
+
+    reply_markup = InlineKeyboardMarkup(keyboard)
+
     context.bot.send_message(
-        chat_id=update.effective_chat.id, text=messages.pago_realizado)
+        chat_id=update.effective_chat.id, text=messages.pago_realizado, reply_markup=reply_markup)
 
 
 def unknown(update: Update, context: CallbackContext):
@@ -164,7 +176,7 @@ cuentas_handler = MessageHandler(
 dispatcher.add_handler(cuentas_handler)
 
 precio30_handler = MessageHandler(
-    Filters.text(buttons.medio_treinta), precio30_command)
+    Filters.text(buttons.uno_treinta), precio30_command)
 dispatcher.add_handler(precio30_handler)
 
 precio17_handler = MessageHandler(
@@ -197,5 +209,11 @@ dispatcher.add_handler(pago_handler)
 
 unknown_handler = MessageHandler(Filters.command, unknown)
 dispatcher.add_handler(unknown_handler)
+
+
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
+
 
 updater.start_polling()

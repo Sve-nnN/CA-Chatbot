@@ -24,4 +24,5 @@ combo_mil = [[cuenta_bybit]]
 combo_cuenta = combo_scalping
 combo_ambos = [[cuentas_bybit]]
 combo_cuentas = [[medio_treinta, uno_cincuenta], [dos_nuevecinco, tres_cien]]
+
 pagos = [[pago]]

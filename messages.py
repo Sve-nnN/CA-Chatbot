@@ -36,7 +36,7 @@ pago_realizado = """¡Bienvenido a la comunidad VIP de Cripto Avances!
 Esta muy cerca de comenzar a disfrutar de los beneficios de unirse a nuestra exclusiva comunidad.
 
 Por favor, envie un mensaje a este bot: @criptoavancespagos_bot con los siguientes datos:
-- Nombre apellido (Cripto Avance)
+- Nombre apellido (Cripto Avances)
 - Usuario discord (ejemplo#1234
 - Telegram (@ejemplo)
 - Email (ejemplo@gmail.com)
