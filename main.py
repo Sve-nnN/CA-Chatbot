@@ -6,7 +6,7 @@ import buttons
 import logging
 app = Flask(__name__)
 
-token = "5486736673:AAGhd8fpErUiS5WmBVlQEveEERSU7OYqkds"
+token = process.env.TOKEN
 updater = Updater(
     token=token, use_context=True)
 dispatcher = updater.dispatcher
