@@ -1,3 +1,4 @@
 python-telegram-bot==13.14
 Flask == 2.2.2
 Werkzeug == 2.2.2
+Waitress == 2.1.2

@@ -7,7 +7,8 @@ import buttons
 import logging
 app = Flask(__name__)
 
-token = os.environ.get('TOKEN')
+#token = os.environ.get('TOKEN')
+token = "5486736673:AAGhd8fpErUiS5WmBVlQEveEERSU7OYqkds"
 updater = Updater(
     token=token, use_context=True)
 dispatcher = updater.dispatcher
@@ -208,15 +209,17 @@ pago_handler = MessageHandler(
     Filters.text(buttons.pago), pago_command)
 dispatcher.add_handler(pago_handler)
 
-unknown_handler = MessageHandler(Filters.command, unknown)
+unknown_handler = MessageHandler(Filters.text, unknown)
 dispatcher.add_handler(unknown_handler)
-
-app.run(host='0.0.0.0', port=8080)
 
 
 @app.route("/")
 def hello_world():
     return "<p>Hello, World!</p>"
 
+
+if __name__ == "__main__":
+    from waitress import serve
+    serve(app, port=8080)
 
 updater.start_polling()
