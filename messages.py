@@ -22,7 +22,8 @@ Si tienes una cuenta en Bybit obtienes un 70% de descuento en el servicio. Si no
 cuenta_bybit = """¡Muy bien!
 Ahora selecciona la promoción que deseas contratar.
 """
-dos_servicios = """¡Excelente!
+dos_servicios = """🤩¡Excelente!🤩
+
 Al contratar los dos servicios de Cripto Avances, obtendrás acceso a lo siguiente:
 🔸Acceso a los canales de señales y de alertas 24/7.
 🔸Estrategia de trading
@@ -30,7 +31,9 @@ Al contratar los dos servicios de Cripto Avances, obtendrás acceso a lo siguien
 🔸Excel’s para operar.
 🔸Drive con material de apoyo y sesiones grabadas.
 🔸Canal para interactuar con otros usuarios VIP.
-Si tienes una cuenta en Bybit obtienes un 70% de descuento en el servicio. Si no tienes una cuenta, crea tu cuenta con el siguiente enlace: https://partner.bybit.com/b/CriptoAvances
+
+Si tienes una cuenta en Bybit obtienes un 70% de descuento en el servicio. Si no tienes una cuenta, crea tu cuenta con el siguiente enlace: 
+▶️https://partner.bybit.com/b/CriptoAvances
 """
 pago_realizado = """¡Bienvenido a la comunidad VIP de Cripto Avances!
 Esta muy cerca de comenzar a disfrutar de los beneficios de unirse a nuestra exclusiva comunidad.
